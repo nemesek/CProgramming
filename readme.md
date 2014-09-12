@@ -1,0 +1,1 @@
+self study and side projects for C/C++
