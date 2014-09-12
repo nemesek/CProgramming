@@ -1,14 +1,27 @@
 #include<stdio.h>
 
+
+float celsius_to_fahrenheit(float celsius)
+{
+	return celsius * 9/5 + 32;
+}
+
+float celsius_to_kelvin(float celsius)
+{
+	return celsius + 273.15f;
+}
+
 int main()
 {
-	float celsius, fahrenheit, kelvin;
+	float celsius = 0;
 
-	celsius = 21;
-	fahrenheit = celsius * 9/5 + 32;
-	kelvin = celsius + 273.15f;
+	while(celsius < 100)
+	{
+		celsius = celsius + 10;
+		printf("%.2fC = %.2fF = %.2fK\n",celsius, celsius_to_fahrenheit(celsius), celsius_to_kelvin(celsius));	
+	}
 
-	printf("%.2fC = %.2fF = %.2fK\n",celsius, fahrenheit, kelvin);
+	printf("Done\n");
 
 	return 0;
 }
